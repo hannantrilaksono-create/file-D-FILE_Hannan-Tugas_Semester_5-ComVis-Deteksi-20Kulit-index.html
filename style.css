@@ -1,0 +1,102 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4efe9;
+  color: #3b2a1f;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(135deg, #8a5a3b, #c98f5c);
+  color: #fff;
+  text-align: center;
+  padding: 28px 16px;
+}
+header h1 { font-size: 1.8rem; margin-bottom: 6px; }
+header p  { opacity: .9; }
+
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: grid;
+  gap: 18px;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+}
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+.btn {
+  background: #8a5a3b;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: .95rem;
+  transition: background .2s;
+}
+.btn:hover { background: #6f4529; }
+.btn.secondary { background: #999; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+
+.toggle { margin-left: auto; display: flex; gap: 6px; align-items: center; font-size: .9rem; }
+
+.viewer { text-align: center; position: relative; }
+canvas {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #222;
+  display: none;
+}
+#placeholder { padding: 60px 0; color: #888; }
+
+.result h2 { margin-bottom: 14px; }
+.result h3 { margin: 20px 0 8px; font-size: 1rem; }
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.label { display: block; font-size: .8rem; color: #888; margin-bottom: 4px; }
+.result-grid strong { font-size: 1.1rem; }
+
+.swatch-row { display: flex; align-items: center; gap: 10px; }
+.swatch {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  background: #eee;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #eee;
+  font-size: 1rem;
+}
+.badge.yes { background: #d7f0dc; color: #1e7a34; }
+.badge.no  { background: #fbdcdc; color: #a12626; }
+
+.scale { display: flex; border-radius: 10px; overflow: hidden; }
+.scale div {
+  flex: 1;
+  padding: 18px 6px;
+  text-align: center;
+  font-size: .8rem;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+}
+.scale div:first-child { color: #5a3a22; text-shadow: none; }
+
+.note { margin-top: 14px; font-size: .8rem; color: #777; }
